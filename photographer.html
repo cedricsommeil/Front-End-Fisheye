@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Fisheye - photographe </title>
   </head>
   <body>
@@ -12,25 +14,171 @@
       <img src="assets/images/logo.png" class="logo" />
     </header>
     <main id="main">
+     
+     
       <div class="photograph-header">
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        <div class="info_photographer">
+        <h2>Mimi Keel</h2>
+        <p class="photograph-villCity">London, UK</p>
+        <p class="para_grey">voir le beau dans le quotidien </p>
+       </div>
+
+        <button class="contact_button">Contactez-moi</button>
+     
+      <div class="photo_photographer">
+        <img src="assets/images/Sample Photos/Mimi/Portrait_Nora.jpg" alt="photographer">
+      </div>
+      </div>
+      <div class="photo_tri">
+        <label for="tri">Trier par</label>
+        <select name="tableau" id="tableau_select">
+          <option value="Popularite">Popularité</option>
+          <option value="Date">Date</option>
+          <option value="Titre">Titre</option>
+        </select>
+      </div>
+      <div class="photograph-body">
+        <ul>
+          <li>
+            <figure>
+              <img src="assets/images/Sample Photos/Mimi/Animals_Rainbow.jpg" alt="animals">
+              <figcaption>
+                 <div class="photo_legend">
+                  <h2>Arc-en-cie</h2>
+                  <p class="photo_classement">11</p>
+                  <i class="fas fa-heart"></i>
+
+                 </div>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="assets/images/Sample Photos/Mimi/Travel_Lonesome.jpg" alt="paysage">
+              <figcaption>
+                 <div class="photo_legend">
+                  <h2>Solitude </h2>
+                  <p class="photo_classement">12</p>
+                  <i class="fas fa-heart"></i>
+                 </div>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="assets/images/Sample Photos/Mimi/Event_SeasideWedding.jpg" alt="photo_restaurant">
+              <figcaption>
+                <div class="photo_legend">
+                  <h2>Mariage à la mer</h2>
+                  <p class="photo_classement">12</p>
+                  <i class="fas fa-heart"></i>
+                 </div>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+          <figure>
+              <img src="assets/images/Sample Photos/Mimi/Portrait_Background.jpg" alt="photo_femme">
+              <figcaption>
+                <div class="photo_legend">
+                  <h2>Triste</h2>
+                  <p class="photo_classement">11</p>
+                  <i class="fas fa-heart"></i>
+                 </div>
+              </figcaption>
+            </figure>
+          </li>
+     
+        <li>
+          <figure>
+            <img src="assets/images/Sample Photos/Mimi/Event_PintoWedding.jpg" alt="photo">
+            <figcaption>
+              <div class="photo_legend">
+                <h2>Couple d'exception</h2>
+                <p class="photo_classement">11</p>
+                <i class="fas fa-heart"></i>
+               </div>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="assets/images/Sample Photos/Mimi/Portrait_Wednesday.jpg" alt="photo">
+            <figcaption>
+              <div class="photo_legend">
+                <h2>L'enfance</h2>
+                <p class="photo_classement">11</p>
+                <i class="fas fa-heart"></i>
+               </div>
+            </figcaption>
+          </figure>
+        </li>
+
+      </ul>
       </div>
     </main>
+
+
+    
     <div id="contact_modal">
 			<div class="modal">
 				<header>
           <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+          <img src="assets/icons/close.svg" id="close-modal-contact" />
         </header>
+        <h3>Mimi Keel</h3>
 				<form>
 					<div>
-						<label>Prénom</label>
-						<input />
-					</div>
-          <button class="contact_button">Envoyer</button>
+					<label for="first">Prénom</label>
+					<input class="text_control" type="text" id="first" name="first" placeholder="Pierre">
+        	</div>
+             <span class="erreur" id="prenom_erreur">
+
+            </span>
+          <div>
+            <label for="last">Nom</label>
+            <input class="text_control" type="text" id="last" name="last"placeholder="Giraud">
+          </div>
+            <span class="erreur" id="nom_erreur">
+            </span>
+          <div>
+              <label for="email">Email</label>
+              <input class="text_control" type="text" id="email" name="email"placeholder="toto@exemple.com">
+          </div>
+              <span class="erreur" id="email_erreur">
+
+              </span>
+           <div class="champ">
+               <label for="message">Votre Message</label>
+               <textarea name="text_control" id="message" cols="30" rows="10"></textarea>
+          </div>
+                <span class="erreur" id="message_erreur">
+  
+                </span>
+
+
+
+
+
+
+
+
+          <button class="envoi-message contact_button">Envoyer</button>
 				</form>
 			</div>
 		</div>
-    <script src="/scripts/utils/contactForm.js"></script>
+    <!---------------------------------------------------------->
+    <!-- <div class="bground" id="bground2">
+      <div class="content">
+        <span class="close" id="close"></span>
+        <div class="modal-body">
+          <h1 class="titre_felicitation">Félicitations ! votre réservation a été reçu</h1> 
+          <button class="contact_button" id="close2">
+            close
+          </button> 
+        </div>
+      </div>
+    </div> -->
+    <script src="scripts/utils/contactForm.js"></script>
   </body>
 </html>

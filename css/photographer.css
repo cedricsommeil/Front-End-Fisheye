@@ -1,20 +1,45 @@
 #contact_modal {
     display: none;
-}
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(255,255,255, 0.8);
+    z-index:999;
 
+}
+.photo_photographer > img {
+    width: 120%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+
+}
 .photograph-header {
+    padding: 78px;
     background-color: #FAFAFA;
     height: 300px;
     margin: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.photograph-header h2 {
+    color: #D3573C;
+    font-size: 50px;
+  
 }
 
 .contact_button {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: white;
     padding: 11px;
     width: 170px;
-    height: 70px;
+    height: 57px;
     border: none;
     background-color: #901C1C;
     border-radius: 5px;
@@ -24,30 +49,40 @@
 .modal {
     border-radius: 5px;
     background-color: #DB8876;
-    width: 50%;
+    width: 27%;
+    height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 35px;
     margin: auto;
+    margin-top: 20px;
 }
 
 .modal header {
     justify-content: space-between;
     width: 100%;
+    
 }
 
 .modal header img {
     cursor: pointer;
+    width: 20px;
 }
 
 .modal header h2 {
-    font-size: 64px;
+    font-size: 50px;
     font-weight: normal;
     text-align: center;
 }
-
+h3 {
+    font-size: 43px;
+    font-weight: normal;
+    margin: 0;
+    
+    
+}
 form {
     display: flex;
     width: 100%;
@@ -66,11 +101,150 @@ form div {
     width: 100%;
     align-items: self-start;
     margin-bottom: 26px;
+    
 }
 
 form input {
     width: 100%;
-    height: 68px;
+    height: 40px;
     border: none;
     border-radius: 5px;
 }
+form textarea {
+    width: 100%;
+    height: 120px;
+}
+.photograph-body ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    margin: 0 100px;
+    list-style: none;
+    padding: 0;
+   
+}
+.photograph-body ul figure{
+    margin: 0;
+}
+.photograph-body img {
+    width: 100%;
+    height:400px;
+    object-fit: cover;
+
+}
+.photograph-villCity{
+    color: #D3573C;
+    font-size: 23px;
+}
+.photo_legend{
+    display: flex;
+    color: rgb(146, 6, 6);
+}
+.photo_legend h2{
+    flex-grow: 10;
+}
+.photo_legend .photo_classement{
+    flex-grow: 1;
+}
+.fas{
+    margin-top: 30px;
+    font-size: 23px;
+}
+.para_grey{
+    font-size: 18px;
+    color: grey;
+    margin-bottom: 0;
+}
+.photo_classement{
+    font-size: 24px;
+}
+.photo_tri{
+    margin-left: 99px;
+    margin-bottom: 100px;
+}
+label{
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+#tableau_select{
+    padding: 7px 15px;
+    background-color: brown;
+    color: #fff;
+    font-size: 18px;
+}
+#tableau_select option {
+    padding: 5px;
+}
+
+/*****************************************************************/
+
+  /*.modal-body {
+    padding: 15px 8%;
+    margin: 15px auto;
+  }
+  .content {
+    margin: 8% auto;
+    width: 100%;
+    max-width: 500px;
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+    background: #232323;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    padding-top: 10px;
+  }
+  .bground {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(26, 39, 156, 0.4);
+  }
+  .button {
+    background: #fe142f;
+    margin-top: 0.5em;
+    padding: 1em;
+    color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .button:hover {
+    background: #3876ac;
+  }
+  
+  .smFont {
+    font-size: 16px;
+  }
+  #bground2 .modal-body {
+    padding: 200px 8% !important; 
+}
+#bground2 h1 {
+  font-size: 2rem !important;
+}
+#close2{
+  margin-top: 186px;
+}
+.modal-btn {
+    font-size: 145%;
+    background: #fe142f;
+    display: flex;
+    margin: auto;
+    padding: 2em;
+    color: #fff;
+    padding: 0.75rem 2.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  
+  .modal-btn:hover {
+    background: #3876ac;
+  }*/

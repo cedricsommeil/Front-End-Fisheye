@@ -42,9 +42,32 @@ h1 {
 .photographer_section article h2 {
     color: #D3573C;
     font-size: 36px;
+    margin-bottom: 0;
 }
 
 .photographer_section article img {
     height: 200px;
     width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.photographer_section article p {
+    color: #D3573C;
+    margin: 0;
+}
+.para_situation{
+    color: black!important;
+}
+.para_price{
+    color: grey !important;
+}
+
+.erreur{
+
+    font-size:0.9rem;
+    color:#ffffff;
+    transform:translate3d(0,-20px,0);
+    display:inline-block;
+    display:none;
+
 }
