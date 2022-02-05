@@ -49,7 +49,7 @@ document.querySelector('.envoi-message').addEventListener('click', function(e){
     const prenomErreur = document.getElementById('prenom_erreur');
     const nom = document.getElementById('last').value;
     const nomErreur = document.getElementById("nom_erreur");
-    const email = document.getElementById('email').value;
+    const email = document.getElementById('email');
     const emailErreur = document.getElementById('email_erreur');
     const message = document.getElementById('message').value;
     const messageErreur = document.getElementById('message_erreur');
@@ -73,7 +73,7 @@ document.querySelector('.envoi-message').addEventListener('click', function(e){
           nomErreur.innerHTML="";
         }
     
-    if (email === ""){
+    if (!ValidateEmail(email) || email.value === ""){
           emailErreur.innerHTML= 'Veuillez entrer un email valide';
           emailErreur.style.display = "inline-block";
           erreur = true;
@@ -93,7 +93,9 @@ document.querySelector('.envoi-message').addEventListener('click', function(e){
 
       if(erreur === false){
           closeModal()
-      }
+          console.log(prenom,nom,email.value,message)
+      }/*lorsqu'on clic sur le formulaire envoyé le contenu de chaque input apparait dans la console grace
+      a console.log(prenom....)*/
     
      });
 
