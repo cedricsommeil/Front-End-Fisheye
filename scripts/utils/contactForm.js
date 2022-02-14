@@ -8,12 +8,6 @@ function closeModal() {
     modal.style.display = "none";
 }
 
-
-document.querySelector('.contact_button').addEventListener('click', function() {
-    displayModal();
-    
-});
-
 document.querySelector("#close-modal-contact").addEventListener("click", function(){
 
   closeModal();
