@@ -6,8 +6,6 @@ let id = params.get('id');
 const photographers = fetch("../../data/photographers.json")
   .then(response => response.json())
   .then(data => {
-
-    console.log(data)
         // On recupere les informations du photographes en se servant de son ID
 
         const photographerInfo = data?.photographers?.filter((photographer)=>{
