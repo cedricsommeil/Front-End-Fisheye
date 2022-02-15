@@ -177,13 +177,13 @@ label{
     padding: 5px;
 }
 .container_like{
-    width: 500px;
-    height: 100px; 
+    width: 454px;
+    height: 80px; 
     display:flex;
     justify-content: space-around;
     background-color:  #D3573C;
     bottom:0;
-    right: 80px;
+    right: 30px;
     padding:0 34px;
     position: fixed;
     
