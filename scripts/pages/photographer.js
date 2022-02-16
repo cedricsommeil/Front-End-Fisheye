@@ -1,5 +1,6 @@
 //Mettre le code JavaScript lié à la page photographer.html
 // console.log(window.location.search)
+
 /*recuper chaque id*/
 let params = (new URL(document.location)).searchParams;
 let id = params.get('id');
@@ -24,9 +25,11 @@ console.log(photographerInfo);
 
   }).catch(console.error);
 
-function createMediaInfo(data){
+  function createMediaInfo(data){
 
-  const mediaInfo = /* faire une boucle for sur les elements en rajoutant un ul et li */ 
+  const mediaInfo = /* faire une boucle car il ya plusieurs photo et on veut 
+  que sa s'affiche dans un ordre particulier for sur les elements en rajoutant un ul et li */ 
+
 }
 
   function createPhotographerInfos(data){
