@@ -146,10 +146,11 @@ form textarea {
 .photo_legend .photo_classement{
     flex-grow: 1;
 }
-.fas{
+.photo_legend .fas{
     margin-top: 30px;
     font-size: 23px;
 }
+
 .para_grey{
     font-size: 18px;
     color: grey;

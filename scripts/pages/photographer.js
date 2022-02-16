@@ -3,24 +3,31 @@
 /*recuper chaque id*/
 let params = (new URL(document.location)).searchParams;
 let id = params.get('id');
-const photographers = fetch("../../data/photographers.json")
+// console.log(id);
+const photographers = fetch("data/photographers.json")
   .then(response => response.json())
   .then(data => {
-        // On recupere les informations du photographes en se servant de son ID
+// On recupere les informations du photographes en se servant de son ID
+console.log(data.photographers);
 
-        const photographerInfo = data?.photographers?.filter((photographer)=>{
-
+        const photographerInfo = data.photographers.filter((photographer)=>{
                 return photographer.id === Number(id);
 
         });
-
-
+        const mediaInfo = data.medias.filter((media)=>{
+                return media.photographerId === Number(id);
+ });
+ 
+console.log(photographerInfo);
         createPhotographerInfos(photographerInfo)
-      
+        createMediaInfo(mediaInfo)
 
   }).catch(console.error);
 
+function createMediaInfo(data){
 
+  const mediaInfo = /* faire une boucle for sur les elements en rajoutant un ul et li */ 
+}
 
   function createPhotographerInfos(data){
 
