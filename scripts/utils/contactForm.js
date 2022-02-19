@@ -1,3 +1,6 @@
+
+/**********Le Formulaire******************/
+
 function displayModal() {
     const modal = document.getElementById("contact_modal");
 	  modal.style.display = "block";
@@ -13,25 +16,6 @@ document.querySelector("#close-modal-contact").addEventListener("click", functio
   closeModal();
 
 });
-
-/*****************************************************/
-// const closebutton2 = document.getElementById("close");
-// const modal2 = document.getElementById('bground2');
-// function displayModal2() {
-//   modal.style.display ="none";
-//   modal2.style.display = "block";
-//   document.body.scrollTop = 0;
-//   document.documentElement.scrollTop = 0;
-// }
-
-// closebutton2.addEventListener("click", closeModal2);
-
-// // close modal1 et 2 function 
-// function closeModal2() {
-//   modal2.style.display = "none";
-//   modal.style.display = "none";
-//   }
-/******************************************************/
 
 
 

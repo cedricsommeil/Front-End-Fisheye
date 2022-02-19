@@ -1,6 +1,29 @@
 //Mettre le code JavaScript lié à la page photographer.html
-// console.log(window.location.search)
+/*Dynamiser le tableau des tries*/
 
+const clickOpen = document.querySelector(".open_tab");
+const clickClose = document.querySelector(".close_tab");
+const tab = document.querySelector('.class');
+
+/*pour ouvrir le tableau*/
+ clickOpen.addEventListener("click", open);
+
+ function open(){
+  tab.style.display = "block";
+  
+ }
+
+ /*pour fermer le tableau*/
+ clickClose.addEventListener('dblclick', close);
+
+ function close(){
+   tab.style.display = "none";
+ 
+ }
+
+
+
+// console.log(window.location.search)
 /*recuper chaque id*/
 let params = (new URL(document.location)).searchParams;
 let id = params.get('id');
