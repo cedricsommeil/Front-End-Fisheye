@@ -1,25 +1,68 @@
 //Mettre le code JavaScript lié à la page photographer.html
 /*Dynamiser le tableau des tries*/
+let isOpen = false;
 
-const clickOpen = document.querySelector(".open_tab");
-const clickClose = document.querySelector(".close_tab");
-const tab = document.querySelector('.class');
-
-/*pour ouvrir le tableau*/
- clickOpen.addEventListener("click", open);
-
- function open(){
-  tab.style.display = "block";
-  
- }
-
- /*pour fermer le tableau*/
- clickClose.addEventListener('dblclick', close);
-
- function close(){
-   tab.style.display = "none";
+ const selectOptions = document.querySelector("#select-block-options");
  
- }
+ const firstButtonText = document.querySelector("#select-first-option-text");
+ 
+ const optionsButtons = selectOptions.querySelectorAll("button");
+
+document.querySelector("#select-first-option").addEventListener("click", ()=>{
+				if(isOpen === false){
+         
+             // On ouvre le faux select
+             
+             selectOptions.style.display = "block";
+             
+             isOpen = true;
+             
+             return handleButtonsOptions();
+        
+        }
+        
+        if(isOpen === true){
+        
+        		 return closeSelect();
+        
+        }
+
+});
+
+
+function closeSelect(){
+
+		 // On ferme le faux select
+             
+     selectOptions.style.display = "none";
+     
+      return isOpen = false;
+             
+
+}
+
+function handleButtonsOptions(){
+
+     optionsButtons.forEach((button)=>{
+        
+              button.onclick = ()=>{
+              
+                  const buttonText = button.textContent;
+                    
+                  button.innerHTML = firstButtonText.textContent;
+                    
+                  firstButtonText.innerHTML = buttonText;         
+                    
+                  return closeSelect();
+        
+              };
+        
+        });
+
+
+}
+
+
 
 
 

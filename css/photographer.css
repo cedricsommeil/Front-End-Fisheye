@@ -82,7 +82,7 @@
     text-align: center;
 }
 h3 {
-    font-size: 43px;
+    font-size: 30px;
     font-weight: normal;
     margin: 0;
     
@@ -120,9 +120,8 @@ form textarea {
     height: 120px;
 }
 .photograph-body{
-    position: relative;
-    z-index: 0;
-}
+   margin-top: 50px;
+} 
 .photograph-body ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -169,53 +168,46 @@ form textarea {
 .photo_classement{
     font-size: 24px;
 }
+
 /************************tableau tri*****************/
 
-.title_tri{
-    display: block;
-    font-size: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-.tab{
-   margin-left: 150px;
-   margin-top: -110px;
-   display: inline-block;
-   position: absolute;
-   z-index: 999;
-}
-.tab .class{
-    display: none;
-}
-.close_tab .open_tab {
-    font-size: 31px;
-}
-button{
-    border: 1px solid black;
-    background-color: #D3573C;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 10px;
-    display: block;
-    width: 211px;
-    z-index: 999;
- 
-}
-button:hover{
-    background-color: rgb(211, 87, 60, 0.8) ;
+#title_tri{
+    font-size: 26px;
+    margin-bottom: -28px;
+    margin-left: 17px;
 }
 
-.date{
-    border-top: 1px solid white ;
-    border-bottom: 1px solid white;
+#select-first-option span::after{
+  
+    content:" ^ ";
+    display:inline-block;
+    vertical-align:bottom;
+    position:absolute;
+    transform:translate3d(0, -50%, 0) scale(1.5, 1.5);
+    right:15px;
+    top:55%;
+    
+  
 }
-.tr{
-    width: 211px;
-    display: flex;
-    justify-content: space-between;
+
+.select-option{
+    width:170px;
+    border:none;
+    background:#911C1C;
+    color:#ffffff;
+    position:relative;
+    display:block;
+    border:1px solid #ffffff;
+    cursor:pointer;
+    height:60px;
+    margin-left: 130px;
 }
-.close_tab{
-    margin-top: 70px;
+
+#select-block-options{
+    position: absolute;
+    z-index: 1000px;
+    display:none;
+  
 }
 
 
