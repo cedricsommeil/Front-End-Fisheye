@@ -91,11 +91,39 @@ const photographers = fetch("../../data/photographers.json")
 
   }).catch(console.error);
 
+
   function createMediaInfo(data){
 
-   /* faire une boucle car il ya plusieurs photo et on veut 
-  que sa s'affiche dans un ordre particulier for sur les elements en rajoutant un ul et li */ 
- 
+      /* faire une boucle car il ya plusieurs photo et on veut 
+      que sa s'affiche dans un ordre particulier for sur les elements en rajoutant un ul et li */ 
+
+   
+      let photographerMedias = "";
+
+      data.forEach((media)=>{
+
+            photographerMedias += `
+            
+            <li>
+              <figure>
+                ${mediasFactory(media)}
+                <figcaption>
+                  <div class="photo_legend">
+                    <h2>Arc-en-cie</h2>
+                    <p class="photo_classement">${media.likes}</p>
+                    <i class="fas fa-heart heart-photo"></i>
+
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
+                
+            
+            `
+
+      });
+
+    document.querySelector(".photograph-body ul").innerHTML = photographerMedias;
 
 }
 
